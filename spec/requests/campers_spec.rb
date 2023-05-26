@@ -72,7 +72,7 @@ RSpec.describe "Campers", type: :request do
       it "returns an error message" do
         get "/campers/bad_id"
         expect(response.body).to include_json({
-          error: "Camper not found"
+          error: "Couldn't find Camper with 'id'=bad_id"
         })
       end
       
